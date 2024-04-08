@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PopX Login</title>
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Base styles for the form container */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f9f9f9;
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 400px;
+            
+        }
+
+        .form-container h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-container p {
+            font-size: 14px;
+            color: #666666;
+            
+            margin-bottom: 20px;
+        }
+
+        /* Custom input and label styles */
+        input[type="text"] {
+            box-sizing: border-box;
+            width: 100%;
+            height: calc(3em + 2px);
+            margin: 0 0 1em;
+            padding: 6px;
+            border: 1px solid #bababa;
+            border-radius: 10px;
+            background: #fff;
+            font-size: 16px;
+            resize: none;
+            outline: none;
+        }
+
+        input[type="text"]:focus {
+            border-color: #00bafa;
+        }
+
+        input[type="text"]:focus + label[placeholder]:before {
+            color: #0091da;
+        }
+
+        input[type="text"]:focus + label[placeholder]:before,
+        input[type="text"]:valid + label[placeholder]:before {
+            transition-duration: .2s;
+            transform: translate(0, -1.6em) scale(0.9, 0.9);
+            font-weight: bold;
+        }
+
+        input[type="text"]:valid {
+            border-color: green;
+        }
+
+        input[type="text"]:valid + label[placeholder]:before {
+            color: green;
+        }
+
+        input[type="text"]:invalid + label[placeholder][alt]:before {
+            content: attr(alt);
+        }
+
+        input[type="text"] + label[placeholder] {
+            display: block;
+            pointer-events: none;
+            line-height: 1.25em;
+            margin-top: calc(-3em - 2px);
+            margin-bottom: calc((3em - 1em) + 2px);
+        }
+
+        input[type="text"] + label[placeholder]:before {
+            content: attr(placeholder);
+            display: inline-block;
+            margin: 0 calc(0.5em + 2px);
+            padding: 0 2px;
+            color: #7d7d7d;
+            white-space: nowrap;
+            transition: 0.3s ease-in-out;
+            background-image: linear-gradient(to bottom, #ffffff, #ffffff);
+            background-size: 100% 5px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        /* Button styles */
+        button {
+            width: 100%;
+            height: 40px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 1em;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Radio button styles */
+        input[type="radio"] {
+            display: none; /* Hide the actual radio buttons */
+        }
+
+        /* Custom radio button appearance */
+        input[type="radio"] + label {
+            display: inline-block;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        /* Style for checked radio button */
+        input[type="radio"]:checked + label {
+            color: blue; /* Change text color to blue */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Sign in to your PopX account</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <form action="#" method="POST">
+            <div>
+                <input id="input" type="text" required />
+                <label for="input" alt="Full name" placeholder="After Typing"></label>
+            </div>
+            <div>
+                <input id="input" type="text" required />
+                <label for="input" alt="Phone number" placeholder="After Typing"></label>
+            </div>
+            <div>
+                <input id="input" type="text" required />
+                <label for="input" alt="Email" placeholder="After Typing"></label>
+            </div>
+            <div>
+                <input id="input" type="text" required />
+                <label for="input" alt="Password" placeholder="After Typing"></label>
+            </div>
+            <div>
+                <input id="input" type="text" required />
+                <label for="input" alt="Company name" placeholder="After Typing"></label>
+            </div>
+            <div><p>Are you working for an agency?</p></div>
+            <!-- Radio button section -->
+            <div>
+                
+                <input type="radio" id="yes" name="agency" value="yes" checked>
+                <label for="yes">Yes</label>
+                <input type="radio" id="no" name="agency" value="no">
+                <label for="no">No</label>
+            </div>
+            <div>
+                <button type="submit">Create Account</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
